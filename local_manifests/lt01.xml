@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<project name="kumajaya/android_device_samsung_lt01-common" path="device/samsung/lt01-common" />
+	<project name="CyanogenMod/android_device_samsung_smdk4412-common" path="device/samsung/smdk4412-common" />
+	<project name="kumajaya/android_device_samsung_lt01wifi" path="device/samsung/lt01wifi" />
+	<project name="kumajaya/android_device_samsung_lt01lte" path="device/samsung/lt01lte" />
+	<project name="kumajaya/android_device_samsung_lt013g" path="device/samsung/lt013g" />
+	<project name="CyanogenMod/android_hardware_samsung" path="hardware/samsung" />
+	<project name="kumajaya/proprietary_vendor_samsung" path="vendor/samsung" />
+	<project name="kumajaya/android_kernel_samsung_lt01" path="kernel/samsung/lt01" />
+	<project name="CyanogenMod/android_packages_apps_SamsungServiceMode" path="packages/apps/SamsungServiceMode" />
+	<project name="kumajaya/android_kernel_samsung_smdk4x12" path="kernel/samsung/smdk4x12" />
+	
+
+</manifest>
+
