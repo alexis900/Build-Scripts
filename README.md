@@ -5,7 +5,7 @@ Personal build scripts
 
 To make use of these scripts:
 1.  Open a terminal session in your home directory and enter the following command:
-    git clone https://github.com/gr8nole/Build-Scripts scripts
+    git clone https://github.com/gr8nole/Build-Scripts.git scripts
 2.  Open the ~/scripts folder and "run in terminal" the Build_Menu.sh
 3.  Make selections from the menu.
 
