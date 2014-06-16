@@ -16,14 +16,14 @@ echo " 4. - Compile T310 Recovery	4a.- Create T21x CWM packages"
 echo " 5. - Compile T311 Recovery	5a.- Create T31x CWM packages"
 echo " 6. - Compile T315 Recovery	6a.- Create T21x TWRP packages"
 echo " 7. - CM11 sync only		7a.- Create T31x TWRP packages"
-echo " 8. - CM11 Build no sync	g. - Goya Menu"	
-echo " 9. - Build CM11 all	 	p. - Sync with Philz_Touch"
+echo " 8. - CM11 Build T31x no sync	g. - Goya Menu"	
+echo " 9. - Build CM11 all T31x	p. - Sync with Philz_Touch"
 echo " 10.- Build T310 CM11		pp.- Update Philz w/ gr8nole attributes"		 
 echo " 11.- Build T311 CM11"		
 echo " 12.- Build T315 CM11		t. - Sync with TWRP"
-echo "                          	tt.- Update TWRP w/ gr8nole attributes"
-echo " r.- Reset Colors"
-echo " 				uu.- Update CWM w/ gr8nole attributes"
+echo " 13.- Build T210 CM11    	tt.- Update TWRP w/ gr8nole attributes"
+echo " "
+echo " r.- Reset Colors		uu.- Update CWM w/ gr8nole attributes"
 echo " x.- EXIT "
   echo 
   echo -n "Enter option: "
@@ -43,6 +43,7 @@ if [ "$?" != "1" ]
       10) tput sgr0;~/scripts/clobber.sh;~/scripts/build_T310.sh;tput setf 0; tput setb 7;;
       11) tput sgr0;~/scripts/clobber.sh;~/scripts/build_T311.sh;tput setf 0; tput setb 7;;
       12) tput sgr0;~/scripts/clobber.sh;~/scripts/build_T315.sh;tput setf 0; tput setb 7;;
+      13) tput sgr0;~/scripts/clobber.sh;~/scripts/build_T210.sh;tput setf 0; tput setb 7;;
       1a) tput sgr0;~/scripts/philzlt02wifi.sh;tput setf 0; tput setb 7;;
       2a) tput sgr0;~/scripts/philzlt023g.sh;tput setf 0; tput setb 7;;
       3a) tput sgr0;~/scripts/philzi605.sh;tput setf 0; tput setb 7;;
