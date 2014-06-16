@@ -48,6 +48,13 @@ git checkout cm-11.0
 git merge -m "merge kumajaya commits" upstream/cm-11.0
 echo "Done"
 echo " "
+cd ~/cm11/external/skia
+git remote add upstream https://github.com/kumajaya/android_external_skia
+git fetch upstream
+git checkout cm-11.0
+git merge -m "merge kumajaya commits" upstream/cm-11.0
+echo "Done"
+echo " "
 tput setf 6; echo "Moving to source directory..."; tput setf 7
 echo " "
 cd ~/cm11
