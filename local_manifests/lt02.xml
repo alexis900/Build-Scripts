@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<project name="gr8nole/android_device_samsung_lt02wifi" path="device/samsung/lt02wifi" />
+	<project name="gr8nole/android_device_samsung_lt02wifi" path="device/samsung/lt02wifi" remote="github" revision="master" />
 	<project name="gr8nole/android_kernel_samsung_lt02" path="kernel/samsung/lt02_4.2.2" remote="github" revision="4.2.2" />
-	<project name="gr8nole/android_vendor_samsung_lt02wifi" path="vendor/samsung/lt02wifi" />
+	<project name="gr8nole/android_vendor_samsung_lt02wifi" path="vendor/samsung/lt02wifi" remote="github" revision="master" />
 
 </manifest>
 
