@@ -18,6 +18,4 @@ git checkout cm-11.0
 git merge -m "merge kumajaya commits" upstream/cm-11.0
 echo "Done"
 echo " "
-tput setf 6; echo "Merging external/skia..."; tput setf 7
-echo " "
 done
