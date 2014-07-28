@@ -23,11 +23,17 @@ tput setf 6; echo "Building T110 recovery..."; tput setf 7
 echo " "
 make -j4 recoveryimage
 
-mkdir ~/Builds
+if [ ! -d ~/Builds ]; then
+    mkdir ~/Builds
+fi
 
-mkdir ~/Builds/$(date +"%m-%d-%Y")
+if [ ! -d ~/Builds/$(date +"%m-%d-%Y") ]; then
+    mkdir ~/Builds/$(date +"%m-%d-%Y")
+fi
 
-mkdir ~/Builds/$(date +"%m-%d-%Y")/T110
+if [ ! -d ~/Builds/$(date +"%m-%d-%Y")/T110 ]; then
+    mkdir ~/Builds/$(date +"%m-%d-%Y")/T110
+fi
 
 cp ~/cm11/out/target/product/goyawifi/recovery.img  ~/Builds/$(date +"%m-%d-%Y")/T110/
 

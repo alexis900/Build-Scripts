@@ -1,37 +1,19 @@
 ui_print("");
 ui_print("");
-ui_print(" ###################### ");
-ui_print("  PhilZ Touch Recovery  ");
-ui_print("  Full Touch CWM Based  ");
-ui_print("            +           ");
-ui_print("   Advanced  Features   ");
-ui_print("     Phone  lt023g     ");
-ui_print(" ###################### ");
+ui_print("         TWRP 2.7.1.0");
+ui_print("       compiled by gr8nole   ");
+ui_print("  for the Galaxy Tab 3 7 in. T211   ");
+ui_print("");
 ui_print("");
 ui_print("");
 show_progress(1.000000, 0);
-
-assert(getprop("ro.product.device") == "SM-T211" || getprop("ro.build.product") == "SM-T211" ||
-    getprop("ro.product.device") == "lt023g" || getprop("ro.build.product") == "lt023g" || abort("This package is for SM-T211,lt023g devices; this is a  + getprop(ro.product.device) + ."););
-
 ui_print("Flashing Recovery...");
-set_progress(0.100000);
-package_extract_file("recovery.img", "/dev/block/mmcblk0p10");
-
-set_progress(1.000000);
-show_progress(1.000000, 0);
-
+package_extract_file("recovery.img", "/tmp/recovery.img");
+show_progress(0.100000, 70);
+write_raw_image("/tmp/recovery.img", "/dev/block/mmcblk0p10");
+show_progress(0.100000, 90);
+delete("/tmp/recovery.img");
+show_progress(0.100000, 100);
+ui_print("Done");
 ui_print("");
-ui_print(" ###################### ");
-ui_print("  PhilZ Touch Recovery  ");
-ui_print("  Full Touch CWM Based  ");
-ui_print("            +           ");
-ui_print("   Advanced  Features   ");
-ui_print("     6.25.4  CWMv6.0.4.7 ");
-ui_print("      Phone  lt023g     ");
-ui_print(" ###################### ");
-
 ui_print("");
-ui_print("Brought to you by * Phil3759 *");
-ui_print("http://forum.xda-developers.com/showthread.php?t=2201860");
-ui_print("Done, reboot recovery...");

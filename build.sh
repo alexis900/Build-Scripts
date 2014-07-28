@@ -77,9 +77,13 @@ brunch lt013g
 echo "T311 build STOP time...." $(date +"%T") >> ~/time.txt
 echo " "
 
-mkdir ~/Builds
+if [ ! -d ~/Builds ]; then
+    mkdir ~/Builds
+fi
 
-mkdir ~/Builds/$(date +"%m-%d-%Y")
+if [ ! -d ~/Builds/$(date +"%m-%d-%Y") ]; then
+    mkdir ~/Builds/$(date +"%m-%d-%Y")
+fi
 
 cp ~/cm11/out/target/product/lt013g/cm-11*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 

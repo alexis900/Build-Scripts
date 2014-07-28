@@ -23,11 +23,17 @@ tput setf 6; echo "Building T315 recovery..."; tput setf 7
 echo " "
 make -j4 recoveryimage
 
-mkdir ~/Builds
+if [ ! -d ~/Builds ]; then
+    mkdir ~/Builds
+fi
 
-mkdir ~/Builds/$(date +"%m-%d-%Y")
+if [ ! -d ~/Builds/$(date +"%m-%d-%Y") ]; then
+    mkdir ~/Builds/$(date +"%m-%d-%Y")
+fi
 
-mkdir ~/Builds/$(date +"%m-%d-%Y")/T315
+if [ ! -d ~/Builds/$(date +"%m-%d-%Y")/T315 ]; then
+    mkdir ~/Builds/$(date +"%m-%d-%Y")/T315
+fi
 
 cp ~/cm11/out/target/product/lt01lte/recovery.img  ~/Builds/$(date +"%m-%d-%Y")/T315/
 
