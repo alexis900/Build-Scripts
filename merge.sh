@@ -3,11 +3,11 @@
 tput setf 6; echo "Merging frameworks/av..."; tput setf 7
 echo " "
 cd ~/cm11/frameworks/av
-git remote add upstream https://github.com/kumajaya/android_frameworks_av
-git fetch upstream
+#git remote add upstream https://github.com/kumajaya/android_frameworks_av
+#git fetch upstream
 #git checkout cm-11.0
 #git merge -m "merge kumajaya commits" upstream/cm-11.0
-git cherry-pick 6efb57fcdafb139559ab93b751fcd332ca296a3b
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_av refs/changes/24/62924/4 && git cherry-pick FETCH_HEAD
 echo "Done"
 echo " "
 tput setf 6; echo "Merging system/vold..."; tput setf 7
@@ -25,7 +25,7 @@ git cherry-pick bd795445b6e4f0ed2aeebfa0c2ed25fe21000ae9
 tput setf 6; echo "Merging frameworks/base..."; tput setf 7
 echo " "
 cd ~/cm11/frameworks/base
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/21/68621/5 && git checkout FETCH_HEAD
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/21/68621/5 && git cherry-pick FETCH_HEAD
 
 echo "Done"
 echo " "
