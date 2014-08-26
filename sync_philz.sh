@@ -10,7 +10,8 @@ rm -rf ~/cm11/bootable/recovery
 
 tput setf 6; echo "Syncing Philz_Touch..."; tput setf 7
 echo " "
-git clone https://github.com/PhilZ-cwm6/philz_touch_cwm6.git recovery
+git clone https://github.com/PhilZ-cwm6/philz_touch_cwm6.git -b cm-11.0-beta recovery-philz
+
 
 tput setf 6; echo "sync complete..."; tput setf 7
 

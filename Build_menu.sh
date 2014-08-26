@@ -53,7 +53,7 @@ if [ "$?" != "1" ]
       7a) tput sgr0;~/scripts/twrplt01wifi.sh;~/scripts/twrplt013g.sh;~/scripts/twrplt01lte.sh;tput setf 0; tput setb 7;;
 	  g)  tput sgr0;~/scripts/goyamenu.sh;tput setf 0; tput setb 7;;
       p) tput sgr0;~/scripts/sync_philz.sh ;tput setf 0; tput setb 7;;
-      pp) tput sgr0;sed -i -e 's/Compiled %s/Compiled by gr8nole %s/g' ~/cm11/bootable/recovery/advanced_functions.c;cp ~/scripts/icon_clockwork.png ~/cm11/bootable/recovery/res/images/icon_clockwork.png;tput setf 0; tput setb 7;;
+      pp) tput sgr0;sed -i -e 's/Compiled %s/Compiled by gr8nole %s/g' ~/cm11/bootable/recovery-philz/extendedcommands.c;cp ~/scripts/icon_clockwork.png ~/cm11/bootable/recovery-philz/res/images/icon_clockwork.png;tput setf 0; tput setb 7;;
       t) tput sgr0;~/scripts/sync_twrp.sh ;tput setf 0; tput setb 7;;
       tt) tput sgr0;cp ~/scripts/top-bar.jpg ~/cm11/bootable/recovery/gui/devices/800x1280/res/images/top-bar.jpg;cp ~/scripts/background.jpg ~/cm11/bootable/recovery/gui/devices/1024x600/res/images/background.jpg;tput setf 0; tput setb 7;;
       r) tput sgr0;;
