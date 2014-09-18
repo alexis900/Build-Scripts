@@ -17,7 +17,7 @@ git remote add upstream https://github.com/kumajaya/android_system_vold
 git fetch upstream
 #git checkout cm-11.0
 #git merge -m "merge kumajaya commits" upstream/cm-11.0
-git cherry-pick ded69dfcdd3faa8ab8998610cc12c4e1d7333690
+#git cherry-pick ded69dfcdd3faa8ab8998610cc12c4e1d7333690
 git cherry-pick e147e2ba270eff2418cedc5e3ad195b00a72b34f
 git cherry-pick bd795445b6e4f0ed2aeebfa0c2ed25fe21000ae9
 
