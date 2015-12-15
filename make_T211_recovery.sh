@@ -2,7 +2,7 @@
 
 tput setf 6; echo "Moving to source directory..."; tput setf 7
 echo " "
-cd ~/cm11
+cd ~/cm13
 echo " "
 tput setf 6; echo "Ensuring ccache is used..."; tput setf 7
 echo " "
@@ -35,7 +35,7 @@ if [ ! -d ~/Builds/$(date +"%m-%d-%Y")/T211 ]; then
     mkdir ~/Builds/$(date +"%m-%d-%Y")/T211
 fi
 
-cp ~/cm11/out/target/product/lt023g/recovery.img  ~/Builds/$(date +"%m-%d-%Y")/T211/
+cp ~/cm13/out/target/product/lt023g/recovery.img  ~/Builds/$(date +"%m-%d-%Y")/T211/
 
 
 done

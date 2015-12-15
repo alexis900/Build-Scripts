@@ -18,7 +18,7 @@ echo " n. - NO - DON'T CLOBBER"
 if [ "$?" != "1" ]
   then
     case $opt in
-      y) tput sgr0;~/scripts/make_clobber.sh;exit;;
+      y) tput sgr0;~/scripts-13/make_clobber.sh;exit;;
       n) tput sgr0;exit;;
      esac
   fi

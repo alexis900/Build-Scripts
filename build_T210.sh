@@ -7,7 +7,7 @@ mv ~/time.txt  ~/time_previous.txt
 
 tput setf 6; echo  "Moving to source directory..."; tput setf 7
 echo " "
-cd ~/cm11
+cd ~/cm13_T210
 
 date  >> ~/time.txt
 echo " " >> ~/time.txt
@@ -45,6 +45,6 @@ if [ ! -d ~/Builds/$(date +"%m-%d-%Y") ]; then
     mkdir ~/Builds/$(date +"%m-%d-%Y")
 fi
 
-cp ~/cm11/out/target/product/lt02wifi/cm-11*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+cp ~/cm13_T210/out/target/product/lt02wifi/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 
 done

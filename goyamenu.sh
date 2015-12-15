@@ -31,10 +31,10 @@ echo " x.- EXIT "
 if [ "$?" != "1" ]
   then
     case $opt in
-      1) tput sgr0;~/scripts/clobber.sh;~/scripts/make_T110_recovery.sh;tput setf 0; tput setb 7;;      
-      1a) tput sgr0;~/scripts/philzgoyawifi.sh;tput setf 0; tput setb 7;;      
-	  4a) tput sgr0;~/scripts/cwmgoyawifi.sh;tput setf 0; tput setb 7;;      
-	  6a) tput sgr0;~/scripts/twrpgoyawifi.sh;tput setf 0; tput setb 7;;      
+      1) tput sgr0;~/scripts-13/clobber.sh;~/scripts-13/make_T110_recovery.sh;tput setf 0; tput setb 7;;      
+      1a) tput sgr0;~/scripts-13/philzgoyawifi.sh;tput setf 0; tput setb 7;;      
+	  4a) tput sgr0;~/scripts-13/cwmgoyawifi.sh;tput setf 0; tput setb 7;;      
+	  6a) tput sgr0;~/scripts-13/twrpgoyawifi.sh;tput setf 0; tput setb 7;;      
       r) tput sgr0;;      
       x) exit;;
     esac

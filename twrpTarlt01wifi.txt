@@ -29,7 +29,7 @@ show_progress(1.000000, 0);
 
 ui_print("");' > ~/scripts/T310/META-INF/com/google/android/updater-script
 
-cp -ar ~/scripts/T310/META-INF ~/Builds/$(date +"%m-%d-%Y")/T310/META-INF
+cp -ar ~/scripts-12/T310/META-INF ~/Builds/$(date +"%m-%d-%Y")/T310/META-INF
 zip -r T310.TWRP.$BUILD.flashable.zip META-INF recovery.img
 
 rm -r ~/Builds/$(date +"%m-%d-%Y")/T310/META-INF)

@@ -1,6 +1,6 @@
 #! /bin/bash
 
-grep '#define TW_VERSION_STR'  ~/cm11/bootable/recovery/variables.h  > ~/BuildNumber.txt
+grep '#define TW_VERSION_STR'  ~/cm13/bootable/recovery/variables.h  > ~/BuildNumber.txt
 
 split -l 1 ~/BuildNumber.txt new
 
@@ -18,7 +18,7 @@ cat ~/blank2.sh > ~/cBuild.sh
 
 rm ~/new*
 
-cat ~/scripts/twrpTarlt02wifi.txt >> ~/cBuild.sh
+cat ~/scripts-13/twrpTarlt02wifi.txt >> ~/cBuild.sh
 
 bash cBuild.sh
 rm blank1.sh

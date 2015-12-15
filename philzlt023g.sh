@@ -1,6 +1,6 @@
 #! /bin/bash
 
-grep PHILZ_BUILD ~/cm11/bootable/recovery/Android.mk  > ~/PhilzBuildNumber.txt
+grep PHILZ_BUILD ~/cm13/bootable/recovery/Android.mk  > ~/PhilzBuildNumber.txt
 
 split -l 1 ~/PhilzBuildNumber.txt new
 
@@ -21,7 +21,7 @@ rm blank2.sh
 rm number.txt
 rm blank.txt
 
-grep 'RECOVERY_VERSION := $(RECOVERY_NAME) '  ~/cm11/bootable/recovery/Android.mk  > ~/BuildNumber.txt
+grep 'RECOVERY_VERSION := $(RECOVERY_NAME) '  ~/cm13/bootable/recovery/Android.mk  > ~/BuildNumber.txt
 
 split -l 1 ~/BuildNumber.txt new
 
@@ -37,7 +37,7 @@ cat ~/blank2.sh >> ~/PhilzBuild.sh
 
 rm ~/new*
 
-cat ~/scripts/PhilzTarlt023g.txt >> ~/PhilzBuild.sh
+cat ~/scripts-13/PhilzTarlt023g.txt >> ~/PhilzBuild.sh
 
 bash PhilzBuild.sh
 rm blank1.sh

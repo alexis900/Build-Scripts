@@ -1,6 +1,6 @@
 #! /bin/bash
 
-grep 'RECOVERY_VERSION := $(RECOVERY_NAME) '  ~/cm11/bootable/recovery/Android.mk  > ~/BuildNumber.txt
+grep 'RECOVERY_VERSION := $(RECOVERY_NAME) '  ~/cm13/bootable/recovery/Android.mk  > ~/BuildNumber.txt
 
 split -l 1 ~/BuildNumber.txt new
 
@@ -18,7 +18,7 @@ cat ~/blank2.sh > ~/cBuild.sh
 
 rm ~/new*
 
-cat ~/scripts/cwmTargoyawifi.txt >> ~/cBuild.sh
+cat ~/scripts-13/cwmTargoyawifi.txt >> ~/cBuild.sh
 
 bash cBuild.sh
 rm blank1.sh
