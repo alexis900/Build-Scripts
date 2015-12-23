@@ -48,6 +48,8 @@ fi
 
 cp ~/cm13/out/target/product/lt01wifi/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 
+rm -r ~/cm13/out/target/product/lt01wifi
+
 tput setf 6; echo "Building T311..."; tput setf 7
 echo " "
 echo " " >> ~/time.txt
@@ -60,6 +62,8 @@ echo " "
 
 cp ~/cm13/out/target/product/lt013g/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 
+rm -r ~/cm13/out/target/product/lt013g
+
 tput setf 6; echo "Building T315..."; tput setf 7
 echo " "
 echo " " >> ~/time.txt
@@ -70,5 +74,6 @@ brunch lt01lte
 echo "T315 build STOP time...." $(date +"%T") >> ~/time.txt
 
 cp ~/cm13/out/target/product/lt01lte/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+
 
 done
