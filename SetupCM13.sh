@@ -1,16 +1,16 @@
 #! /bin/bash
 
 sudo apt-get install bison build-essential curl flex \
-g++-multilib gcc-multilib git-core gnupg gperf \
+g++-multilib gcc-multilib git gnupg gperf \
 lib32ncurses5-dev lib32readline-gplv2-dev lib32z1-dev \
-libesd0-dev libncurses5-dev libsdl1.2-dev \
+libesd0-dev liblz4-tool libncurses5-dev libsdl1.2-dev \
 libwxgtk2.8-dev libxml2 libxml2-utils lzop \
-openjdk-6-jdk openjdk-6-jre pngcrush schedtool \
+openjdk-7-jdk openjdk-7-jre pngcrush schedtool \
 squashfs-tools xsltproc zip zlib1g-dev
 
-sudo add-apt-repository ppa:webupd8team/java
-sudo apt-get update
-sudo apt-get install oracle-java6-installer
+#sudo add-apt-repository ppa:webupd8team/java
+#sudo apt-get update
+#sudo apt-get install oracle-java6-installer
 
 mkdir ~/bin
 PATH=~/bin:$PATH
