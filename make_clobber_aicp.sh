@@ -2,7 +2,7 @@
 
 tput setf 6; echo "Moving to source directory..."; tput setf 7
 echo " "
-cd ~/cm13
+cd ~/aicp
 echo " "
 tput setf 6; echo "Setting up source environment..."; tput setf 7
 echo " "

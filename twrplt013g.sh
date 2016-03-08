@@ -1,6 +1,6 @@
 #! /bin/bash
 
-grep '#define TW_VERSION_STR'  ~/cm13/bootable/recovery/variables.h  > ~/BuildNumber.txt
+grep '#define TW_VERSION_STR'  ~/twrp/bootable/recovery/variables.h  > ~/BuildNumber.txt
 
 split -l 1 ~/BuildNumber.txt new
 

@@ -8,6 +8,12 @@ libwxgtk2.8-dev libxml2 libxml2-utils lzop \
 openjdk-7-jdk openjdk-7-jre pngcrush schedtool \
 squashfs-tools xsltproc zip zlib1g-dev
 
+sudo apt-get install maven
+
+#sudo add-apt-repository ppa:webupd8team/java
+#sudo apt-get update
+#sudo apt-get install oracle-java6-installer
+
 mkdir ~/bin
 PATH=~/bin:$PATH
 cd ~/bin
@@ -36,6 +42,6 @@ repo sync -c
 
 
 export USE_CCACHE=1
-prebuilts/misc/linux-x86/ccache/ccache -M 25G
+prebuilts/misc/linux-x86/ccache/ccache -M 18G
 
 done

@@ -9,17 +9,6 @@ tput setf 6; echo  "Moving to source directory..."; tput setf 7
 echo " "
 cd ~/cm13
 
-date  >> ~/time.txt
-echo " " >> ~/time.txt
-echo "Repo sync START time..." $(date +"%T") >> ~/time.txt
-
-
-tput setf 6; echo "Syncing repo..."; tput setf 7
-echo " "
-repo sync 
-
-echo "Repo sync STOP time...." $(date +"%T") >> ~/time.txt
-
 tput setf 6; echo "Ensuring ccache is used..."; tput setf 7
 echo " "
 export USE_CCACHE=1
@@ -27,28 +16,6 @@ tput setf 6; echo "Setting up source environment..."; tput setf 7
 echo " "
 source build/envsetup.sh
 echo " "
-
-tput setf 6; echo "Building T310..."; tput setf 7
-echo " "
-echo " " >> ~/time.txt
-echo " " >> ~/time.txt
-echo "T310 build START time..." $(date +"%T") >> ~/time.txt
-brunch lt01wifi
-
-echo "T310 build STOP time...." $(date +"%T") >> ~/time.txt
-echo " "
-
-if [ ! -d ~/Builds ]; then
-    mkdir ~/Builds
-fi
-
-if [ ! -d ~/Builds/$(date +"%m-%d-%Y") ]; then
-    mkdir ~/Builds/$(date +"%m-%d-%Y")
-fi
-
-cp ~/cm13/out/target/product/lt01wifi/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
-
-#rm -r ~/cm13/out/target/product/lt01wifi
 
 tput setf 6; echo "Building T311..."; tput setf 7
 echo " "
@@ -60,9 +27,16 @@ brunch lt013g
 echo "T311 build STOP time...." $(date +"%T") >> ~/time.txt
 echo " "
 
-cp ~/cm13/out/target/product/lt013g/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 
-#rm -r ~/cm13/out/target/product/lt013g
+if [ ! -d ~/Builds ]; then
+    mkdir ~/Builds
+fi
+
+if [ ! -d ~/Builds/$(date +"%m-%d-%Y") ]; then
+    mkdir ~/Builds/$(date +"%m-%d-%Y")
+fi
+
+cp ~/cm13/out/target/product/lt013g/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 
 tput setf 6; echo "Building T315..."; tput setf 7
 echo " "
@@ -74,6 +48,5 @@ brunch lt01lte
 echo "T315 build STOP time...." $(date +"%T") >> ~/time.txt
 
 cp ~/cm13/out/target/product/lt01lte/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
-
 
 done

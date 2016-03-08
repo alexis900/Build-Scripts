@@ -7,7 +7,7 @@ mv ~/time.txt  ~/time_previous.txt
 
 tput setf 6; echo  "Moving to source directory..."; tput setf 7
 echo " "
-cd ~/cm13
+cd ~/aicp
 
 date  >> ~/time.txt
 echo " " >> ~/time.txt
@@ -38,7 +38,7 @@ if [ ! -d ~/Builds/$(date +"%m-%d-%Y") ]; then
     mkdir ~/Builds/$(date +"%m-%d-%Y")
 fi
 
-cp ~/cm13/out/target/product/lt01wifi/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/ 
+cp ~/aicp/out/target/product/lt01wifi/aicp*.zip  ~/Builds/$(date +"%m-%d-%Y")/ 
 mail -s "build status" "gr8nole@gmail.com" < output.txt
 
 

@@ -9,7 +9,10 @@ do
   echo 
   echo "> CLOBBER MENU"
   echo
-echo " y. - YES - MAKE CLOBBER"
+echo " aa. - Clobber All"
+echo " a. - Clobber AICP"
+echo " b. - Clobber Bliss"
+echo " c. - Clobber CM13"
 echo " n. - NO - DON'T CLOBBER"
 
   echo 
@@ -18,8 +21,12 @@ echo " n. - NO - DON'T CLOBBER"
 if [ "$?" != "1" ]
   then
     case $opt in
-      y) tput sgr0;~/scripts-13/make_clobber.sh;exit;;
+      aa) tput sgr0;~/scripts-13/make_clobber_all.sh;exit;;
+      a) tput sgr0;~/scripts-13/make_clobber_aicp.sh;exit;;
+      b) tput sgr0;~/scripts-13/make_clobber_bliss.sh;exit;;
+      c) tput sgr0;~/scripts-13/make_clobber.sh;exit;;
       n) tput sgr0;exit;;
      esac
   fi
 done
+

@@ -7,7 +7,7 @@ mv ~/time.txt  ~/time_previous.txt
 
 tput setf 6; echo  "Moving to source directory..."; tput setf 7
 echo " "
-cd ~/cm13
+cd ~/bliss
 
 date  >> ~/time.txt
 echo " " >> ~/time.txt
@@ -46,9 +46,9 @@ if [ ! -d ~/Builds/$(date +"%m-%d-%Y") ]; then
     mkdir ~/Builds/$(date +"%m-%d-%Y")
 fi
 
-cp ~/cm13/out/target/product/lt01wifi/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+cp ~/bliss/out/target/product/lt01wifi/Bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 
-#rm -r ~/cm13/out/target/product/lt01wifi
+#rm -r ~/bliss/out/target/product/lt01wifi
 
 tput setf 6; echo "Building T311..."; tput setf 7
 echo " "
@@ -60,9 +60,9 @@ brunch lt013g
 echo "T311 build STOP time...." $(date +"%T") >> ~/time.txt
 echo " "
 
-cp ~/cm13/out/target/product/lt013g/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+cp ~/bliss/out/target/product/lt013g/Bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 
-#rm -r ~/cm13/out/target/product/lt013g
+#rm -r ~/bliss/out/target/product/lt013g
 
 tput setf 6; echo "Building T315..."; tput setf 7
 echo " "
@@ -73,7 +73,7 @@ brunch lt01lte
 
 echo "T315 build STOP time...." $(date +"%T") >> ~/time.txt
 
-cp ~/cm13/out/target/product/lt01lte/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+cp ~/bliss/out/target/product/lt01lte/Bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 
 
 done

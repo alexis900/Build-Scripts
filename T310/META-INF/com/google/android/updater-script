@@ -1,6 +1,6 @@
 ui_print("");
 ui_print("");
-ui_print("		   TWRP 2.8.4.0");
+ui_print("		   TWRP 3.0.0-1");
 ui_print("      	compiled by gr8nole   ");
 ui_print("          for the Galaxy Tab 3 8 inch    ");
 ui_print("");
