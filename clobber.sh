@@ -21,10 +21,10 @@ echo " n. - NO - DON'T CLOBBER"
 if [ "$?" != "1" ]
   then
     case $opt in
-      aa) tput sgr0;~/scripts-13/make_clobber_all.sh;exit;;
-      a) tput sgr0;~/scripts-13/make_clobber_aicp.sh;exit;;
-      b) tput sgr0;~/scripts-13/make_clobber_bliss.sh;exit;;
-      c) tput sgr0;~/scripts-13/make_clobber.sh;exit;;
+      aa) tput sgr0;~/scripts/make_clobber_all.sh;exit;;
+      a) tput sgr0;~/scripts/make_clobber_aicp.sh;exit;;
+      b) tput sgr0;~/scripts/make_clobber_bliss.sh;exit;;
+      c) tput sgr0;~/scripts/make_clobber.sh;exit;;
       n) tput sgr0;exit;;
      esac
   fi

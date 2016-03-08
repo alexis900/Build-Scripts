@@ -18,7 +18,7 @@ cat ~/blank2.sh > ~/cBuild.sh
 
 rm ~/new*
 
-cat ~/scripts-13/twrpTarlt013g.txt >> ~/cBuild.sh
+cat ~/scripts/twrpTarlt013g.txt >> ~/cBuild.sh
 
 bash cBuild.sh
 rm blank1.sh

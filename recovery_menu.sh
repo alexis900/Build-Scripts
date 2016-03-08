@@ -28,16 +28,16 @@ echo " x.- EXIT "
 if [ "$?" != "1" ]
   then
     case $opt in
-      1) tput sgr0;~/scripts-13/make_T210_recovery.sh;tput setf 0; tput setb 7;;
-      2) tput sgr0;~/scripts-13/make_T211_recovery.sh;tput setf 0; tput setb 7;;
-      3) tput sgr0;~/scripts-13/make_i605_recovery.sh;tput setf 0; tput setb 7;;
-      4) tput sgr0;~/scripts-13/make_T310_recovery.sh;tput setf 0; tput setb 7;;
-      5) tput sgr0;~/scripts-13/make_T311_recovery.sh;tput setf 0; tput setb 7;;
-      6) tput sgr0;~/scripts-13/make_T315_recovery.sh;tput setf 0; tput setb 7;;
-      1a) tput sgr0;~/scripts-13/philzlt02wifi.sh;tput setf 0; tput setb 7;;
-      2a) tput sgr0;~/scripts-13/philzlt023g.sh;tput setf 0; tput setb 7;;
-      3a) tput sgr0;~/scripts-13/philzi605.sh;tput setf 0; tput setb 7;;
-      5a) tput sgr0;~/scripts-13/cwmlt01wifi.sh;~/scripts-13/cwmlt013g.sh;~/scripts-13/cwmlt01lte.sh;tput setf 0; tput setb 7;;
+      1) tput sgr0;~/scripts/make_T210_recovery.sh;tput setf 0; tput setb 7;;
+      2) tput sgr0;~/scripts/make_T211_recovery.sh;tput setf 0; tput setb 7;;
+      3) tput sgr0;~/scripts/make_i605_recovery.sh;tput setf 0; tput setb 7;;
+      4) tput sgr0;~/scripts/make_T310_recovery.sh;tput setf 0; tput setb 7;;
+      5) tput sgr0;~/scripts/make_T311_recovery.sh;tput setf 0; tput setb 7;;
+      6) tput sgr0;~/scripts/make_T315_recovery.sh;tput setf 0; tput setb 7;;
+      1a) tput sgr0;~/scripts/philzlt02wifi.sh;tput setf 0; tput setb 7;;
+      2a) tput sgr0;~/scripts/philzlt023g.sh;tput setf 0; tput setb 7;;
+      3a) tput sgr0;~/scripts/philzi605.sh;tput setf 0; tput setb 7;;
+      5a) tput sgr0;~/scripts/cwmlt01wifi.sh;~/scripts/cwmlt013g.sh;~/scripts/cwmlt01lte.sh;tput setf 0; tput setb 7;;
       r) tput sgr0;;
       x) exit;;
     esac
