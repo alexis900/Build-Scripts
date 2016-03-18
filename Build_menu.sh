@@ -10,9 +10,9 @@ do
   echo 
   echo "> MAIN MENU"
   echo
-echo " 1. - AICP - Build All-NoSync	1a.- Bliss - Build All-NoSync	"
-echo " 2. - AICP - Build T310   	2a.- Bliss - Build T310   	"
-echo " 3. - AICP - Build T311&T315	3a.- Bliss - Build T311&T315	"
+echo " 1. - AICP - Build All-NoSync	1b.- Bliss - Build All-NoSync	"
+echo " 2. - AICP - Build T310   	2b.- Bliss - Build T310   	"
+echo " 3. - AICP - Build T311&T315	3b.- Bliss - Build T311&T315	"
 echo " 4. - Compile T310 Recovery	4a.- "
 echo " 5. - Compile T311 Recovery	5a.- AICP sync only"
 echo " 6. - Compile T315 Recovery	5b.- Bliss sync only"
@@ -24,7 +24,7 @@ echo " 11.- Build T311 cm13		ta.- AICP terminal"
 echo " 12.- Build T315 cm13		tb.- Bliss terminal"
 echo " 13.- Build T311_315 cm13	tc.- CM13 terminal"
 echo " "
-echo " r.- Reset Colors		uu.- "
+echo " r.- Reset Colors		uu.- Check ccache"
 echo " x.- EXIT "
   echo 
   echo -n "Enter option: "
@@ -45,9 +45,9 @@ if [ "$?" != "1" ]
       11) tput sgr0;~/scripts/clobber.sh;~/scripts/build_T311.sh;tput setf 0; tput setb 7;;
       12) tput sgr0;~/scripts/clobber.sh;~/scripts/build_T315.sh;tput setf 0; tput setb 7;;
       13) tput sgr0;~/scripts/clobber.sh;~/scripts/build_T311_315.sh;tput setf 0; tput setb 7;;
-      1a) tput sgr0;~/scripts/clobber.sh;~/scripts/build_bliss_nosync.sh;tput setf 0; tput setb 7;;
-      2a) tput sgr0;~/scripts/clobber.sh;~/scripts/build_bliss_T310.sh;tput setf 0; tput setb 7;;
-      3a) tput sgr0;~/scripts/clobber.sh;~/scripts/build_bliss_T311_315.sh;tput setf 0; tput setb 7;;
+      1b) tput sgr0;~/scripts/clobber.sh;~/scripts/build_bliss_nosync.sh;tput setf 0; tput setb 7;;
+      2b) tput sgr0;~/scripts/clobber.sh;~/scripts/build_bliss_T310.sh;tput setf 0; tput setb 7;;
+      3b) tput sgr0;~/scripts/clobber.sh;~/scripts/build_bliss_T311_315.sh;tput setf 0; tput setb 7;;
       4a) ;;
       5a) tput sgr0; ~/scripts/sync_only_aicp.sh;tput setf 0; tput setb 7;;
       5b) tput sgr0; ~/scripts/sync_only_bliss.sh;tput setf 0; tput setb 7;;
@@ -59,7 +59,7 @@ if [ "$?" != "1" ]
       tb) tput sgr0;gnome-terminal  --working-directory=/home/dave/bliss;tput setf 0; tput setb 7;;
       tc) tput sgr0;gnome-terminal  --working-directory=/home/dave/cm13;tput setf 0; tput setb 7;;
       r) tput sgr0;;
-      uu) ;;
+      uu) tput sgr0;~/cm13/prebuilts/misc/linux-x86/ccache/ccache -s;tput setf 0; tput setb 7;;
       x) exit;;
     esac
   fi

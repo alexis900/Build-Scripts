@@ -22,7 +22,8 @@ echo " "
 echo " " >> ~/time.txt
 echo " " >> ~/time.txt
 echo "T311 build START time..." $(date +"%T") >> ~/time.txt
-brunch lt013g
+brunch lt013g | tee >(tail -3 > output.txt)
+mail -s "T311 build status" "gr8nole@gmail.com" < output.txt
 
 echo "T311 build STOP time...." $(date +"%T") >> ~/time.txt
 echo " "
@@ -43,7 +44,8 @@ echo " "
 echo " " >> ~/time.txt
 echo " " >> ~/time.txt
 echo "T315 build START time..." $(date +"%T") >> ~/time.txt
-brunch lt01lte
+brunch lt01lte | tee >(tail -3 > output.txt)
+mail -s "T315 build status" "gr8nole@gmail.com" < output.txt
 
 echo "T315 build STOP time...." $(date +"%T") >> ~/time.txt
 

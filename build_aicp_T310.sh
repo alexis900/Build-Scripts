@@ -25,7 +25,8 @@ echo " "
 echo " " >> ~/time.txt
 echo " " >> ~/time.txt
 echo "T310 build START time..." $(date +"%T") >> ~/time.txt
-brunch lt01wifi  | tee >(tail -50 > output.txt)
+brunch lt01wifi | tee >(tail -3 > output.txt)
+mail -s "T310 build status" "gr8nole@gmail.com" < output.txt
 
 echo "T310 build STOP time...." $(date +"%T") >> ~/time.txt
 echo " "
@@ -39,7 +40,7 @@ if [ ! -d ~/Builds/$(date +"%m-%d-%Y") ]; then
 fi
 
 cp ~/aicp/out/target/product/lt01wifi/aicp*.zip  ~/Builds/$(date +"%m-%d-%Y")/ 
-mail -s "build status" "gr8nole@gmail.com" < output.txt
+
 
 
 done
