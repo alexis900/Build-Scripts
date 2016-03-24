@@ -3,10 +3,11 @@ export PATH=${PATH}:~/bin
 while :
 do
   clear
-#~/cm13/prebuilts/misc/linux-x86/ccache/ccache -s > ~/ccache_stats1
+
 stats=$(~/cm13/prebuilts/misc/linux-x86/ccache/ccache -s)
 ccachesize=$(echo "$stats" | grep -m 1 'cache size')
 size=$(echo "$ccachesize" | cut -b 37-48 )
+
   echo 
   echo "============================================================"
   echo "    gr8nole's Build Menu            >>>>--------;;;----->"
@@ -53,9 +54,9 @@ if [ "$?" != "1" ]
       2b) ~/scripts/clobber.sh;~/scripts/build_bliss_T310.sh;tput setaf 3;;
       3b) ~/scripts/clobber.sh;~/scripts/build_bliss_T311_315.sh;tput setaf 3;;
       4a) ;;
-      5a)  ~/scripts/sync_only_aicp.sh;tput setaf 3;;
-      5b)  ~/scripts/sync_only_bliss.sh;tput setaf 3;;
-      5c)  ~/scripts/sync_only.sh;tput setaf 3;;
+      5a) ~/scripts/sync_only_aicp.sh;tput setaf 3;;
+      5b) ~/scripts/sync_only_bliss.sh;tput setaf 3;;
+      5c) ~/scripts/sync_only.sh;tput setaf 3;;
       g)  ;;
       cc) ~/scripts/clobber.sh;tput setaf 3;;
       m)  ;;
