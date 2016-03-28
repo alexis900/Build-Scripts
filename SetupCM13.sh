@@ -4,11 +4,10 @@ sudo apt-get install bison build-essential curl flex \
 g++-multilib gcc-multilib git gnupg gperf \
 lib32ncurses5-dev lib32readline-gplv2-dev lib32z1-dev \
 libesd0-dev liblz4-tool libncurses5-dev libsdl1.2-dev \
-libwxgtk2.8-dev libxml2 libxml2-utils lzop \
+libwxgtk2.8-dev libxml2 libxml2-utils lzop maven \
 openjdk-7-jdk openjdk-7-jre pngcrush schedtool \
 squashfs-tools xsltproc zip zlib1g-dev
 
-sudo apt-get install maven
 
 #sudo add-apt-repository ppa:webupd8team/java
 #sudo apt-get update
