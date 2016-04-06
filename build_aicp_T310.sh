@@ -39,7 +39,7 @@ if [ ! -d ~/Builds/$(date +"%m-%d-%Y") ]; then
     mkdir ~/Builds/$(date +"%m-%d-%Y")
 fi
 
-cp ~/aicp/out/target/product/lt01wifi/aicp*.zip  ~/Builds/$(date +"%m-%d-%Y")/ 
+cp ~/aicp/out/target/product/lt01wifi/aicp*mm*.zip  ~/Builds/$(date +"%m-%d-%Y")/ 
 
 
 

@@ -39,7 +39,7 @@ if [ ! -d ~/Builds/$(date +"%m-%d-%Y") ]; then
     mkdir ~/Builds/$(date +"%m-%d-%Y")
 fi
 
-cp ~/aicp/out/target/product/lt01wifi/aicp*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+cp ~/aicp/out/target/product/lt01wifi/aicp*mm*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 
 #rm -r ~/aicp/out/target/product/lt01wifi
 
@@ -54,7 +54,7 @@ mail -s "T311 build status" "gr8nole@gmail.com" < output.txt
 echo "T311 build STOP time...." $(date +"%T") >> ~/time.txt
 echo " "
 
-cp ~/aicp/out/target/product/lt013g/aicp*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+cp ~/aicp/out/target/product/lt013g/aicp*mm*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 
 #rm -r ~/aicp/out/target/product/lt013g
 
@@ -68,7 +68,7 @@ mail -s "T315 build status" "gr8nole@gmail.com" < output.txt
 
 echo "T315 build STOP time...." $(date +"%T") >> ~/time.txt
 
-cp ~/aicp/out/target/product/lt01lte/aicp*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+cp ~/aicp/out/target/product/lt01lte/aicp*mm*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 
 
 done

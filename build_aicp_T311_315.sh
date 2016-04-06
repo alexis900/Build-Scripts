@@ -37,7 +37,7 @@ if [ ! -d ~/Builds/$(date +"%m-%d-%Y") ]; then
     mkdir ~/Builds/$(date +"%m-%d-%Y")
 fi
 
-cp ~/aicp/out/target/product/lt013g/aicp*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+cp ~/aicp/out/target/product/lt013g/aicp*mm*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 
 tput setf 6; echo "Building T315..."; tput setf 7
 echo " "
@@ -49,6 +49,6 @@ mail -s "T315 build status" "gr8nole@gmail.com" < output.txt
 
 echo "T315 build STOP time...." $(date +"%T") >> ~/time.txt
 
-cp ~/aicp/out/target/product/lt01lte/aicp*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+cp ~/aicp/out/target/product/lt01lte/aicp*mm*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 
 done
