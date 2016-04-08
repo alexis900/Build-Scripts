@@ -3,16 +3,18 @@ export PATH=${PATH}:~/bin
 while :
 do
   clear
+space=$(df -h /tmp | tail -1 | awk '{print $4}')
 
 stats=$(~/cm13/prebuilts/misc/linux-x86/ccache/ccache -s)
 ccachesize=$(echo "$stats" | grep -m 1 'cache size')
 size=$(echo "$ccachesize" | cut -b 37-48 )
 
+
   echo 
   echo "============================================================"
   echo "    gr8nole's Build Menu            >>>>--------;;;----->"
   echo "============================================================"
-  echo
+  echo  "                                Disk Space Avail=${space}b"
   echo -n "  MAIN MENU";echo "                     \033[38;5;46mccache=$size\033[39m"
   echo
 echo " 1. - AICP - Build All-NoSync	1b.- Bliss - Build All-NoSync	"
