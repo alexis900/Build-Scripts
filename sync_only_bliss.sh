@@ -1,12 +1,9 @@
 #! /bin/bash
 
-
-tput setf 6; echo  "Moving to Bliss source directory..."; tput setf 7
+echo -e "\E[1;36mMoving to Bliss source directory..."; tput sgr0
 echo " "
 cd ~/bliss
 
-tput setf 6; echo "Syncing Bliss repo..."; tput setf 7
+echo -e "\E[1;36mSyncing Bliss repo..."; tput sgr0
 echo " "
 repo sync 
-
-

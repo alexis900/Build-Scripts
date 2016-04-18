@@ -1,15 +1,14 @@
 #! /bin/bash
 
-tput setf 6; echo "Moving to source directory..."; tput setf 7
+echo -e "\E[1;36mMoving to source directory..."; tput sgr0
 echo " "
 cd ~/aicp
 echo " "
-tput setf 6; echo "Setting up source environment..."; tput setf 7
+echo -e "\E[1;36mSetting up source environment..."; tput sgr0
 echo " "
 source build/envsetup.sh
 echo " "
-tput setf 6; echo "Deleting output folder..."; tput setf 7
+echo -e "\E[1;36mDeleting output folder..."; tput sgr0
 echo " "
 make clobber
 
-done

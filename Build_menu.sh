@@ -2,8 +2,8 @@ export PATH=${PATH}:~/bin
 
 while :
 do
-  clear
-space=$(df -h /tmp | tail -1 | awk '{print $4}')
+
+export SPACE=$(df -h /tmp | tail -1 | awk '{print $4}')
 
 stats=$(~/cm13/prebuilts/misc/linux-x86/ccache/ccache -s)
 ccachesize=$(echo "$stats" | grep -m 1 'cache size')
@@ -14,7 +14,7 @@ size=$(echo "$ccachesize" | cut -b 37-48 )
   echo "============================================================"
   echo "    gr8nole's Build Menu            >>>>--------;;;----->"
   echo "============================================================"
-  echo  "                                Disk Space Avail=${space}b"
+  echo  "                                Disk Space Avail=${SPACE}b"
   echo -n "  MAIN MENU";echo "                     \033[38;5;46mccache=$size\033[39m"
   echo
 echo " 1. - AICP - Build All-NoSync	1b.- Bliss - Build All-NoSync	"
@@ -56,9 +56,9 @@ if [ "$?" != "1" ]
       2b) ~/scripts/clobber.sh;~/scripts/build_bliss_T310.sh;tput setaf 3;;
       3b) ~/scripts/clobber.sh;~/scripts/build_bliss_T311_315.sh;tput setaf 3;;
       4a) ;;
-      5a) ~/scripts/sync_only_aicp.sh;tput setaf 3;;
-      5b) ~/scripts/sync_only_bliss.sh;tput setaf 3;;
-      5c) ~/scripts/sync_only.sh;tput setaf 3;;
+      5a) export SOURCE=aicp;~/scripts/sync_only_aicp.sh;~/scripts/merge.sh;tput setaf 3;;
+      5b) export SOURCE=bliss;~/scripts/sync_only_bliss.sh;~/scripts/merge.sh;tput setaf 3;;
+      5c) export SOURCE=cm13;~/scripts/sync_only.sh;~/scripts/merge.sh;tput setaf 3;;
       g)  ;;
       cc) ~/scripts/clobber.sh;tput setaf 3;;
       m)  ;;

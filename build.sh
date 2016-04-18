@@ -5,7 +5,7 @@ mv ~/time.txt  ~/time_previous.txt
 
 
 
-tput setf 6; echo  "Moving to source directory..."; tput setf 7
+echo -e "\E[1;32mMoving to source directory..."; tput sgr0
 echo " "
 cd ~/cm13
 
@@ -14,21 +14,21 @@ echo " " >> ~/time.txt
 echo "Repo sync START time..." $(date +"%T") >> ~/time.txt
 
 
-tput setf 6; echo "Syncing repo..."; tput setf 7
+echo -e "\E[1;32mSyncing repo..."; tput sgr0
 echo " "
 repo sync 
 
 echo "Repo sync STOP time...." $(date +"%T") >> ~/time.txt
 
-tput setf 6; echo "Ensuring ccache is used..."; tput setf 7
+echo -e "\E[1;32mEnsuring ccache is used..."; tput sgr0
 echo " "
 export USE_CCACHE=1
-tput setf 6; echo "Setting up source environment..."; tput setf 7
+echo -e "\E[1;32mSetting up source environment..."; tput sgr0
 echo " "
 source build/envsetup.sh
 echo " "
 
-tput setf 6; echo "Building T310..."; tput setf 7
+echo -e "\E[1;32mBuilding T310..."; tput sgr0
 echo " "
 echo " " >> ~/time.txt
 echo " " >> ~/time.txt
@@ -51,7 +51,7 @@ cp ~/cm13/out/target/product/lt01wifi/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 
 #rm -r ~/cm13/out/target/product/lt01wifi
 
-tput setf 6; echo "Building T311..."; tput setf 7
+echo -e "\E[1;32mBuilding T311..."; tput sgr0
 echo " "
 echo " " >> ~/time.txt
 echo " " >> ~/time.txt
@@ -66,7 +66,7 @@ cp ~/cm13/out/target/product/lt013g/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 
 #rm -r ~/cm13/out/target/product/lt013g
 
-tput setf 6; echo "Building T315..."; tput setf 7
+echo -e "\E[1;32mBuilding T315..."; tput sgr0
 echo " "
 echo " " >> ~/time.txt
 echo " " >> ~/time.txt

@@ -1,12 +1,9 @@
 #! /bin/bash
 
-
-tput setf 6; echo  "Moving to AICP source directory..."; tput setf 7
+echo -e "\E[1;36mMoving to AICP source directory..."; tput sgr0
 echo " "
 cd ~/aicp
 
-tput setf 6; echo "Syncing AICP repo..."; tput setf 7
+echo -e "\E[1;36mSyncing AICP repo..."; tput sgr0
 echo " "
 repo sync 
-
-

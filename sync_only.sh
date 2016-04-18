@@ -1,13 +1,9 @@
 #! /bin/bash
 
-
-tput setf 6; echo  "Moving to CM13 source directory..."; tput setf 7
+echo -e "\E[1;36mMoving to CM13 source directory..."; tput sgr0
 echo " "
 cd ~/cm13
 
-tput setf 6; echo "Syncing CM13 repo..."; tput setf 7
+echo -e "\E[1;36mSyncing CM13 repo..."; tput sgr0
 echo " "
 repo sync 
-
-
-

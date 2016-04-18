@@ -5,19 +5,19 @@ mv ~/time.txt  ~/time_previous.txt
 
 
 
-tput setf 6; echo  "Moving to source directory..."; tput setf 7
+echo -e "\E[1;36mMoving to source directory..."; tput sgr0
 echo " "
 cd ~/cm13
 
-tput setf 6; echo "Ensuring ccache is used..."; tput setf 7
+echo -e "\E[1;36mEnsuring ccache is used..."; tput sgr0
 echo " "
 export USE_CCACHE=1
-tput setf 6; echo "Setting up source environment..."; tput setf 7
+echo -e "\E[1;36mSetting up source environment..."; tput sgr0
 echo " "
 source build/envsetup.sh
 echo " "
 
-tput setf 6; echo "Building T311..."; tput setf 7
+echo -e "\E[1;36mBuilding T311..."; tput sgr0
 echo " "
 echo " " >> ~/time.txt
 echo " " >> ~/time.txt
@@ -39,7 +39,7 @@ fi
 
 cp ~/cm13/out/target/product/lt013g/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 
-tput setf 6; echo "Building T315..."; tput setf 7
+echo -e "\E[1;36mBuilding T315..."; tput sgr0
 echo " "
 echo " " >> ~/time.txt
 echo " " >> ~/time.txt

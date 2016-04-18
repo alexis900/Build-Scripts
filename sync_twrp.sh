@@ -1,18 +1,18 @@
 #! /bin/bash
 
-tput setf 6; echo  "Moving to bootable source directory..."; tput setf 7
+echo -e "\E[1;36mMoving to bootable source directory..."; tput sgr0
 echo " "
 cd ~/cm13/bootable
-tput setf 6; echo  "Removing current recovery directory..."; tput setf 7
+echo -e "\E[1;36mRemoving current recovery directory..."; tput sgr0
 echo " "
 rm -rf ~/cm13/bootable/recovery
 
 
-tput setf 6; echo "Syncing TWRP..."; tput setf 7
+echo -e "\E[1;36mSyncing TWRP..."; tput sgr0
 echo " "
 git clone https://github.com/omnirom/android_bootable_recovery.git recovery
 
-tput setf 6; echo "Sync complete..."; tput setf 7
+echo -e "\E[1;36mSync complete..."; tput sgr0
 
 
 done

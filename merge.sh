@@ -1,22 +1,17 @@
 #! /bin/bash
 
-
-#tput setf 6; echo "Merging frameworks/av..."; tput setf 7
-#echo " "
-#cd ~/cm13/frameworks/av
-#git remote add upstream https://github.com/ArchiDroid/android_frameworks_av
-#git fetch upstream
-#git cherry-pick 0f724cf3a1b0b057004713acffec5f836b7ad616
-
-#tput setf 6; echo "Merging frameworks/base..."; tput setf 7
-#echo " "
-#cd ~/cm13/frameworks/base
-#git remote add upstream https://github.com/gr8nole/android_frameworks_base
-#git fetch upstream
-#git cherry-pick 646939485ec6f7bc917998c28bcc4bcc47176777
+echo " "
+echo -e "\E[1;36mCherry-picking $SOURCE frameworks/av..."; tput sgr0
+echo " "
+echo -e "\E[1;36mMoving to $SOURCE frameworks/av directory..."; tput sgr0
+echo " "
+cd ~/$SOURCE/frameworks/av
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_av refs/changes/30/137230/1 && git cherry-pick FETCH_HEAD
 
 
 
-echo "Done"
+
+echo " "
+echo -e "\E[1;36mDone"; tput sgr0
 echo " "
 

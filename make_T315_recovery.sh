@@ -1,25 +1,25 @@
 #! /bin/bash
 
-tput setf 6; echo "Moving to source directory..."; tput setf 7
+echo -e "\E[1;36mMoving to source directory..."; tput sgr0
 echo " "
 cd ~/cm13
 echo " "
-tput setf 6; echo "Ensuring ccache is used..."; tput setf 7
+echo -e "\E[1;36mEnsuring ccache is used..."; tput sgr0
 echo " "
 export USE_CCACHE=1
-tput setf 6; echo "Setting up source environment..."; tput setf 7
+echo -e "\E[1;36mSetting up source environment..."; tput sgr0
 echo " "
 source build/envsetup.sh
 echo " "
-tput setf 6; echo "Making breakfast..."; tput setf 7
+echo -e "\E[1;36mMaking breakfast..."; tput sgr0
 echo " "
 breakfast lt01lte
 echo " "
-#tput setf 6; echo "Deleting output folder..."; tput setf 7
+#echo -e "\E[1;36mDeleting output folder..."; tput sgr0
 #echo " "
 #make clobber
 #echo " "
-tput setf 6; echo "Building T315 recovery..."; tput setf 7
+echo -e "\E[1;36mBuilding T315 recovery..."; tput sgr0
 echo " "
 make -j4 recoveryimage
 

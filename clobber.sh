@@ -1,6 +1,6 @@
 while :
 do
-  clear
+
 
   echo 
   echo "============================================================"
@@ -17,6 +17,17 @@ echo " n. - NO - DON'T CLOBBER"
 
   echo 
   echo -n "Enter option: "
+  echo 
+  echo 
+  echo 
+  echo 
+  echo 
+  echo 
+  echo 
+  echo   
+  echo 
+  echo 
+  echo 
   read opt
 if [ "$?" != "1" ]
   then
