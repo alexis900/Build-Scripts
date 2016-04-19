@@ -11,6 +11,6 @@ To make use of these scripts:
 
 Notes:
 1.  The above git clone command will create a folder named "scripts" in your home directory (~/scripts).
-2.  Do not move the "scripts" directory.  It will break some of the included scripts that reference the ~/scipts directory.
-3.  Use the SetupCM11.sh to install all necessary components to build CM11 for T31x on a clean Ubuntu install.  You will need to monitor this process and answer a few questions in terminal when some things are installed.  It will take a very long time (several hours) to do the initial repo sync of CM sources.  Reboot after the SetupCM11.sh finishes.
-4.  The sync scripts will first sync projects from the official CM git, then merge any commits from ketut.kumjaya's git.
+2.  If you choose to use another name/location for the scripts folder, open the Build_Menu.sh and edit the "scriptsdir" variable in the second line to reflect the new name/location.
+3.  Use the SetupCM13.sh to install all necessary components to build CM13 for T31x on a clean Ubuntu install.  You will need to monitor this process and answer a few questions in terminal when some things are installed.  It will take a very long time (several hours) to do the initial repo sync of CM sources.  Reboot after the SetupCM13.sh finishes.
+4.  The sync scripts will first sync projects from the official source git, then merge or cherry-pick any other required commits.

@@ -5,28 +5,28 @@ mv ~/time.txt  ~/time_previous.txt
 
 
 
-echo -e "\E[1;36mMoving to source directory..."; tput sgr0
+echo -e "\E[1;32mMoving to $SOURCE source directory..."; tput sgr0
 echo " "
-cd ~/cm13
+cd ~/$SOURCE
 
 date  >> ~/time.txt
 echo " " >> ~/time.txt
-echo " "
-echo -e "\E[1;36mEnsuring ccache is used..."; tput sgr0
+
+echo -e "\E[1;32mEnsuring ccache is used..."; tput sgr0
 echo " "
 export USE_CCACHE=1
-echo -e "\E[1;36mSetting up source environment..."; tput sgr0
+echo -e "\E[1;32mSetting up source environment..."; tput sgr0
 echo " "
 source build/envsetup.sh
 echo " "
 
-echo -e "\E[1;36mBuilding T311..."; tput sgr0
+echo -e "\E[1;32mBuilding T311..."; tput sgr0
 echo " "
 echo " " >> ~/time.txt
 echo " " >> ~/time.txt
 echo "T311 build START time..." $(date +"%T") >> ~/time.txt
 brunch lt013g | tee >(tail -3 > output.txt)
-mail -s "T311 build status" "gr8nole@gmail.com" < output.txt
+mail -s "T311 $SOURCE build status" "gr8nole@gmail.com" < output.txt
 
 echo "T311 build STOP time...." $(date +"%T") >> ~/time.txt
 echo " "
@@ -39,6 +39,10 @@ if [ ! -d ~/Builds/$(date +"%m-%d-%Y") ]; then
     mkdir ~/Builds/$(date +"%m-%d-%Y")
 fi
 
-cp ~/cm13/out/target/product/lt013g/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
-
-done
+if [ -f ~/$SOURCE/out/target/product/lt013g/cm-13*.zip ]; then 
+   cp ~/$SOURCE/out/target/product/lt013g/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+ elif [ -f ~/$SOURCE/out/target/product/lt013g/aicp*mm*.zip ]; then 
+   cp ~/$SOURCE/out/target/product/lt013g/aicp*mm*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+ elif [ -f ~/$SOURCE/out/target/product/lt013g/bliss*.zip ]; then 
+   cp ~/$SOURCE/out/target/product/lt013g/bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+fi

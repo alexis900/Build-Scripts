@@ -33,7 +33,7 @@ cd ~/cm13
 
 repo init -u git://github.com/CyanogenMod/android.git -b cm-13.0
 
-cp -ar ~/scripts/local_manifests ~/cm13/.repo/local_manifests
+cp -ar ./local_manifests ~/cm13/.repo/local_manifests
 
 repo sync -c
 

@@ -27,9 +27,9 @@ ui_print("Done, reboot recovery...");
 show_progress(1.000000, 0);
 
 
-ui_print("");' > ~/scripts/T315/META-INF/com/google/android/updater-script
+ui_print("");' > ~/$scriptsdir/T315/META-INF/com/google/android/updater-script
 
-cp -ar ~/scripts/T315/META-INF ~/Builds/$(date +"%m-%d-%Y")/T315/META-INF
+cp -ar ~/$scriptsdir/T315/META-INF ~/Builds/$(date +"%m-%d-%Y")/T315/META-INF
 zip -r T315.CWM.$BUILD.flashable.zip META-INF recovery.img
 
 rm -r ~/Builds/$(date +"%m-%d-%Y")/T315/META-INF)

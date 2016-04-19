@@ -26,9 +26,9 @@ delete("/tmp/recovery.img");
 show_progress(0.100000, 100);
 ui_print("Done");
 ui_print("");
-ui_print("");' > ~/scripts/T210/META-INF/com/google/android/updater-script
+ui_print("");' > ~/$scriptsdir/T210/META-INF/com/google/android/updater-script
 
-cp -ar ~/scripts/T210/META-INF ~/Builds/$(date +"%m-%d-%Y")/T210/META-INF
+cp -ar ~/$scriptsdir/T210/META-INF ~/Builds/$(date +"%m-%d-%Y")/T210/META-INF
 zip -r T210.CWM.$BUILD.flashable.zip META-INF recovery.img
 
 rm -r ~/Builds/$(date +"%m-%d-%Y")/T210/META-INF)
