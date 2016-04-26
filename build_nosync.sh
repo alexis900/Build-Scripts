@@ -43,8 +43,8 @@ if [ -f ~/$SOURCE/out/target/product/lt01wifi/cm-13*.zip ]; then
    cp ~/$SOURCE/out/target/product/lt01wifi/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
  elif [ -f ~/$SOURCE/out/target/product/lt01wifi/aicp*mm*.zip ]; then 
    cp ~/$SOURCE/out/target/product/lt01wifi/aicp*mm*.zip  ~/Builds/$(date +"%m-%d-%Y")/
- elif [ -f ~/$SOURCE/out/target/product/lt01wifi/bliss*.zip ]; then 
-   cp ~/$SOURCE/out/target/product/lt01wifi/bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+ elif [ -f ~/$SOURCE/out/target/product/lt01wifi/Bliss*.zip ]; then 
+   cp ~/$SOURCE/out/target/product/lt01wifi/Bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 fi
 
 echo -e "\E[1;32mBuilding T311..."; tput sgr0
@@ -62,8 +62,8 @@ if [ -f ~/$SOURCE/out/target/product/lt013g/cm-13*.zip ]; then
    cp ~/$SOURCE/out/target/product/lt013g/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
  elif [ -f ~/$SOURCE/out/target/product/lt013g/aicp*mm*.zip ]; then 
    cp ~/$SOURCE/out/target/product/lt013g/aicp*mm*.zip  ~/Builds/$(date +"%m-%d-%Y")/
- elif [ -f ~/$SOURCE/out/target/product/lt013g/bliss*.zip ]; then 
-   cp ~/$SOURCE/out/target/product/lt013g/bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+ elif [ -f ~/$SOURCE/out/target/product/lt013g/Bliss*.zip ]; then 
+   cp ~/$SOURCE/out/target/product/lt013g/Bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 fi
 
 echo -e "\E[1;32mBuilding T315..."; tput sgr0
@@ -80,8 +80,8 @@ if [ -f ~/$SOURCE/out/target/product/lt01lte/cm-13*.zip ]; then
    cp ~/$SOURCE/out/target/product/lt01lte/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
  elif [ -f ~/$SOURCE/out/target/product/lt01lte/aicp*mm*.zip ]; then 
    cp ~/$SOURCE/out/target/product/lt01lte/aicp*mm*.zip  ~/Builds/$(date +"%m-%d-%Y")/
- elif [ -f ~/$SOURCE/out/target/product/lt01lte/bliss*.zip ]; then 
-   cp ~/$SOURCE/out/target/product/lt01lte/bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+ elif [ -f ~/$SOURCE/out/target/product/lt01lte/Bliss*.zip ]; then 
+   cp ~/$SOURCE/out/target/product/lt01lte/Bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 fi
 
 

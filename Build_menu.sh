@@ -1,4 +1,5 @@
 export PATH=${PATH}:~/bin
+export EXPERIMENTAL_USE_JAVA8=true
 export scriptsdir=scripts   # set this path to the folder where the scripts are located
 while :
 do
@@ -17,9 +18,9 @@ size=$(echo "$ccachesize" | cut -b 37-48 )
   echo  "                       	        Disk Space Avail=${SPACE}b"
   echo -n "  MAIN MENU";echo "                     \033[38;5;46mccache=$size\033[39m"
   echo
-echo " a. - Select AICP as project	1b.- "
-echo " b. - Select Bliss as project	2b.- "
-echo " c. - Select CM13 as project	3b.- "
+echo " a. - Select AICP as project	"
+echo " b. - Select Bliss as project	"
+echo " c. - Select CM13 as project	"
 echo "  "
 echo " 5. - Sync Project        	5b.- Sync and Build Project"
 echo " 6. -                     	5x.- "

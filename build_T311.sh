@@ -43,6 +43,6 @@ if [ -f ~/$SOURCE/out/target/product/lt013g/cm-13*.zip ]; then
    cp ~/$SOURCE/out/target/product/lt013g/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
  elif [ -f ~/$SOURCE/out/target/product/lt013g/aicp*mm*.zip ]; then 
    cp ~/$SOURCE/out/target/product/lt013g/aicp*mm*.zip  ~/Builds/$(date +"%m-%d-%Y")/
- elif [ -f ~/$SOURCE/out/target/product/lt013g/bliss*.zip ]; then 
-   cp ~/$SOURCE/out/target/product/lt013g/bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+ elif [ -f ~/$SOURCE/out/target/product/lt013g/Bliss*.zip ]; then 
+   cp ~/$SOURCE/out/target/product/lt013g/Bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 fi
