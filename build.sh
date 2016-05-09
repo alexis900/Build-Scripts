@@ -33,7 +33,7 @@ echo " "
 echo " " >> ~/time.txt
 echo " " >> ~/time.txt
 echo "T310 build START time..." $(date +"%T") >> ~/time.txt
-brunch lt01wifi | tee >(tail -3 > output.txt)
+brunch $DEVICE | tee >(tail -3 > output.txt)
 mail -s "T310 $SOURCE build status" "gr8nole@gmail.com" < output.txt
 
 echo "T310 build STOP time...." $(date +"%T") >> ~/time.txt
@@ -47,12 +47,12 @@ if [ ! -d ~/Builds/$(date +"%m-%d-%Y") ]; then
     mkdir ~/Builds/$(date +"%m-%d-%Y")
 fi
 
-if [ -f ~/$SOURCE/out/target/product/lt01wifi/cm-13*.zip ]; then 
-   cp ~/$SOURCE/out/target/product/lt01wifi/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
- elif [ -f ~/$SOURCE/out/target/product/lt01wifi/aicp*mm*.zip ]; then 
-   cp ~/$SOURCE/out/target/product/lt01wifi/aicp*mm*.zip  ~/Builds/$(date +"%m-%d-%Y")/
- elif [ -f ~/$SOURCE/out/target/product/lt01wifi/Bliss*.zip ]; then 
-   cp ~/$SOURCE/out/target/product/lt01wifi/Bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+if [ -f ~/$SOURCE/out/target/product/$DEVICE/cm-13*.zip ]; then 
+   cp ~/$SOURCE/out/target/product/$DEVICE/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+ elif [ -f ~/$SOURCE/out/target/product/$DEVICE/aicp*mm*.zip ]; then 
+   cp ~/$SOURCE/out/target/product/$DEVICE/aicp*mm*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+ elif [ -f ~/$SOURCE/out/target/product/$DEVICE/Bliss*.zip ]; then 
+   cp ~/$SOURCE/out/target/product/$DEVICE/Bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 fi
 
 echo -e "\E[1;32mMaking incremental OTA update..."; tput sgr0
@@ -76,18 +76,18 @@ echo " "
 echo " " >> ~/time.txt
 echo " " >> ~/time.txt
 echo "T311 build START time..." $(date +"%T") >> ~/time.txt
-brunch lt013g | tee >(tail -3 > output.txt)
+brunch $DEVICE | tee >(tail -3 > output.txt)
 mail -s "T311 $SOURCE build status" "gr8nole@gmail.com" < output.txt
 
 echo "T311 build STOP time...." $(date +"%T") >> ~/time.txt
 echo " "
 
-if [ -f ~/$SOURCE/out/target/product/lt013g/cm-13*.zip ]; then 
-   cp ~/$SOURCE/out/target/product/lt013g/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
- elif [ -f ~/$SOURCE/out/target/product/lt013g/aicp*mm*.zip ]; then 
-   cp ~/$SOURCE/out/target/product/lt013g/aicp*mm*.zip  ~/Builds/$(date +"%m-%d-%Y")/
- elif [ -f ~/$SOURCE/out/target/product/lt013g/Bliss*.zip ]; then 
-   cp ~/$SOURCE/out/target/product/lt013g/Bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+if [ -f ~/$SOURCE/out/target/product/$DEVICE/cm-13*.zip ]; then 
+   cp ~/$SOURCE/out/target/product/$DEVICE/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+ elif [ -f ~/$SOURCE/out/target/product/$DEVICE/aicp*mm*.zip ]; then 
+   cp ~/$SOURCE/out/target/product/$DEVICE/aicp*mm*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+ elif [ -f ~/$SOURCE/out/target/product/$DEVICE/Bliss*.zip ]; then 
+   cp ~/$SOURCE/out/target/product/$DEVICE/Bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 fi
 
 echo -e "\E[1;32mMaking incremental OTA update..."; tput sgr0
@@ -111,17 +111,17 @@ echo " "
 echo " " >> ~/time.txt
 echo " " >> ~/time.txt
 echo "T315 build START time..." $(date +"%T") >> ~/time.txt
-brunch lt01lte | tee >(tail -3 > output.txt)
+brunch $DEVICE | tee >(tail -3 > output.txt)
 mail -s "T315 $SOURCE build status" "gr8nole@gmail.com" < output.txt
 
 echo "T315 build STOP time...." $(date +"%T") >> ~/time.txt
 
-if [ -f ~/$SOURCE/out/target/product/lt01lte/cm-13*.zip ]; then 
-   cp ~/$SOURCE/out/target/product/lt01lte/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
- elif [ -f ~/$SOURCE/out/target/product/lt01lte/aicp*mm*.zip ]; then 
-   cp ~/$SOURCE/out/target/product/lt01lte/aicp*mm*.zip  ~/Builds/$(date +"%m-%d-%Y")/
- elif [ -f ~/$SOURCE/out/target/product/lt01lte/Bliss*.zip ]; then 
-   cp ~/$SOURCE/out/target/product/lt01lte/Bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+if [ -f ~/$SOURCE/out/target/product/$DEVICE/cm-13*.zip ]; then 
+   cp ~/$SOURCE/out/target/product/$DEVICE/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+ elif [ -f ~/$SOURCE/out/target/product/$DEVICE/aicp*mm*.zip ]; then 
+   cp ~/$SOURCE/out/target/product/$DEVICE/aicp*mm*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+ elif [ -f ~/$SOURCE/out/target/product/$DEVICE/Bliss*.zip ]; then 
+   cp ~/$SOURCE/out/target/product/$DEVICE/Bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 fi
 
 echo -e "\E[1;32mMaking incremental OTA update..."; tput sgr0
