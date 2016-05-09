@@ -19,7 +19,7 @@ echo -e "\E[1;32mSetting up source environment..."; tput sgr0
 echo " "
 source build/envsetup.sh
 echo " "
-
+export DEVICE=lt01wifi
 echo -e "\E[1;32mBuilding T310..."; tput sgr0
 echo " "
 echo " " >> ~/time.txt
@@ -47,6 +47,22 @@ if [ -f ~/$SOURCE/out/target/product/lt01wifi/cm-13*.zip ]; then
    cp ~/$SOURCE/out/target/product/lt01wifi/Bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 fi
 
+echo -e "\E[1;32mMaking incremental OTA update..."; tput sgr0
+echo " "
+
+./build/tools/releasetools/ota_from_target_files -i /home/dave/Builds/ota_base/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/$SOURCE/out/target/product/$DEVICE/obj/PACKAGING/target_files_intermediates/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/Builds/$(date +"%m-%d-%Y")/$SOURCE-$DEVICE-inc_update_$(date +"%Y%m%d").zip
+
+   
+if [ -f ~/Builds/$(date +"%m-%d-%Y")/$SOURCE-$DEVICE-inc_update_$(date +"%Y%m%d").zip ]; then
+  if [ ! -d ~/Builds/ota_base/old ]; then
+      mkdir ~/Builds/ota_base/old
+  fi
+ mv ~/Builds/ota_base/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/Builds/ota_base/old/
+ cp ~/$SOURCE/out/target/product/$DEVICE/obj/PACKAGING/target_files_intermediates/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/Builds/ota_base/
+
+fi
+
+export DEVICE=lt013g
 echo -e "\E[1;32mBuilding T311..."; tput sgr0
 echo " "
 echo " " >> ~/time.txt
@@ -66,6 +82,22 @@ if [ -f ~/$SOURCE/out/target/product/lt013g/cm-13*.zip ]; then
    cp ~/$SOURCE/out/target/product/lt013g/Bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 fi
 
+echo -e "\E[1;32mMaking incremental OTA update..."; tput sgr0
+echo " "
+
+./build/tools/releasetools/ota_from_target_files -i /home/dave/Builds/ota_base/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/$SOURCE/out/target/product/$DEVICE/obj/PACKAGING/target_files_intermediates/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/Builds/$(date +"%m-%d-%Y")/$SOURCE-$DEVICE-inc_update_$(date +"%Y%m%d").zip
+
+   
+if [ -f ~/Builds/$(date +"%m-%d-%Y")/$SOURCE-$DEVICE-inc_update_$(date +"%Y%m%d").zip ]; then
+  if [ ! -d ~/Builds/ota_base/old ]; then
+      mkdir ~/Builds/ota_base/old
+  fi
+ mv ~/Builds/ota_base/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/Builds/ota_base/old/
+ cp ~/$SOURCE/out/target/product/$DEVICE/obj/PACKAGING/target_files_intermediates/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/Builds/ota_base/
+
+fi
+
+export DEVICE=lt01lte
 echo -e "\E[1;32mBuilding T315..."; tput sgr0
 echo " "
 echo " " >> ~/time.txt
@@ -84,5 +116,17 @@ if [ -f ~/$SOURCE/out/target/product/lt01lte/cm-13*.zip ]; then
    cp ~/$SOURCE/out/target/product/lt01lte/Bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
 fi
 
+echo -e "\E[1;32mMaking incremental OTA update..."; tput sgr0
+echo " "
 
-done
+./build/tools/releasetools/ota_from_target_files -i /home/dave/Builds/ota_base/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/$SOURCE/out/target/product/$DEVICE/obj/PACKAGING/target_files_intermediates/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/Builds/$(date +"%m-%d-%Y")/$SOURCE-$DEVICE-inc_update_$(date +"%Y%m%d").zip
+
+   
+if [ -f ~/Builds/$(date +"%m-%d-%Y")/$SOURCE-$DEVICE-inc_update_$(date +"%Y%m%d").zip ]; then
+  if [ ! -d ~/Builds/ota_base/old ]; then
+      mkdir ~/Builds/ota_base/old
+  fi
+ mv ~/Builds/ota_base/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/Builds/ota_base/old/
+ cp ~/$SOURCE/out/target/product/$DEVICE/obj/PACKAGING/target_files_intermediates/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/Builds/ota_base/
+
+fi

@@ -1,5 +1,7 @@
 #! /bin/bash
 
+export DEVICE=lt01wifi
+
 rm ~/time_previous.txt
 mv ~/time.txt  ~/time_previous.txt
 
@@ -25,7 +27,7 @@ echo " "
 echo " " >> ~/time.txt
 echo " " >> ~/time.txt
 echo "T310 build START time..." $(date +"%T") >> ~/time.txt
-brunch lt01wifi | tee >(tail -3 > output.txt)
+brunch $DEVICE | tee >(tail -3 > output.txt)
 mail -s "T310 $SOURCE build status" "gr8nole@gmail.com" < output.txt
 
 echo "T310 build STOP time...." $(date +"%T") >> ~/time.txt
@@ -39,10 +41,25 @@ if [ ! -d ~/Builds/$(date +"%m-%d-%Y") ]; then
     mkdir ~/Builds/$(date +"%m-%d-%Y")
 fi
 
-if [ -f ~/$SOURCE/out/target/product/lt01wifi/cm-13*.zip ]; then 
-   cp ~/$SOURCE/out/target/product/lt01wifi/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
- elif [ -f ~/$SOURCE/out/target/product/lt01wifi/aicp*mm*.zip ]; then 
-   cp ~/$SOURCE/out/target/product/lt01wifi/aicp*mm*.zip  ~/Builds/$(date +"%m-%d-%Y")/
- elif [ -f ~/$SOURCE/out/target/product/lt01wifi/Bliss*.zip ]; then 
-   cp ~/$SOURCE/out/target/product/lt01wifi/Bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+if [ -f ~/$SOURCE/out/target/product/$DEVICE/cm-13*.zip ]; then 
+   cp ~/$SOURCE/out/target/product/$DEVICE/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+ elif [ -f ~/$SOURCE/out/target/product/$DEVICE/aicp*mm*.zip ]; then 
+   cp ~/$SOURCE/out/target/product/$DEVICE/aicp*mm*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+ elif [ -f ~/$SOURCE/out/target/product/$DEVICE/Bliss*.zip ]; then 
+   cp ~/$SOURCE/out/target/product/$DEVICE/Bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+fi
+
+echo -e "\E[1;32mMaking incremental OTA update..."; tput sgr0
+echo " "
+
+./build/tools/releasetools/ota_from_target_files -i /home/dave/Builds/ota_base/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/$SOURCE/out/target/product/$DEVICE/obj/PACKAGING/target_files_intermediates/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/Builds/$(date +"%m-%d-%Y")/$SOURCE-$DEVICE-inc_update_$(date +"%Y%m%d").zip
+
+   
+if [ -f ~/Builds/$(date +"%m-%d-%Y")/$SOURCE-$DEVICE-inc_update_$(date +"%Y%m%d").zip ]; then
+  if [ ! -d ~/Builds/ota_base/old ]; then
+      mkdir ~/Builds/ota_base/old
+  fi
+ mv ~/Builds/ota_base/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/Builds/ota_base/old/
+ cp ~/$SOURCE/out/target/product/$DEVICE/obj/PACKAGING/target_files_intermediates/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/Builds/ota_base/
+
 fi

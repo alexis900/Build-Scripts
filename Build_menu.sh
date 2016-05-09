@@ -12,26 +12,26 @@ size=$(echo "$ccachesize" | cut -b 37-48 )
 
 
   echo 
+  echo "================== gr8nole's Build Menu ===================="
+  echo "  Current Project - $SOURCE	     Disk Space Avail=${SPACE}b"           
+  echo "  Current Device  - $DEVICE	     \033[38;5;46mccache=$size\033[39m      "
   echo "============================================================"
-  echo "    gr8nole's Build Menu           Current Project - $SOURCE"
-  echo "============================================================"
-  echo  "                       	        Disk Space Avail=${SPACE}b"
-  echo -n "  MAIN MENU";echo "                     \033[38;5;46mccache=$size\033[39m"
+  echo  "                       	        "
+  echo -n "  MAIN MENU";echo "                     "
   echo
-echo " a. - Select AICP as project	"
-echo " b. - Select Bliss as project	"
-echo " c. - Select CM13 as project	"
+echo " a. - Select AICP as project	1d.- Select T310 as device"
+echo " b. - Select Bliss as project	2d.- Select T311 as device"
+echo " c. - Select CM13 as project	3d.- Select T315 as device"
 echo "  "
 echo " 5. - Sync Project        	5b.- Sync and Build Project"
 echo " 6. -                     	5x.- "
-echo " 7. - Build All Three           5c.- "
+echo " 7. - Build All Three           5c.- Make device incr. ota"
 echo " 8. - Build T310                g. - "	
 echo " 9. - Build T311                cc.- Clobber"
 echo " 10.- Build T315          	m. - "		 
 echo " 11.- Build T311 & T315   	t.- Project Terminal"		
 echo " 12.-             		"
-echo " 13.-             		"
-echo " "
+echo " 13.- Build T217S (aicp only)            "
 echo " r.- Reset Colors		uu.- Check all ccache stats"
 echo " x.- EXIT "
   echo 
@@ -52,14 +52,14 @@ if [ "$?" != "1" ]
       10) ~/$scriptsdir/clobber.sh;~/$scriptsdir/build_T315.sh;tput setaf 3;;
       11) ~/$scriptsdir/clobber.sh;~/$scriptsdir/build_T311_315.sh;tput setaf 3;;
       12) ;;
-      13) ;;
-      1b) ;;
-      2b) ;;
-      3b) ;;
+      13) ~/$scriptsdir/clobber.sh;~/$scriptsdir/build_T217S.sh;tput setaf 3;;
+      1d) export DEVICE=lt01wifi;tput setaf 3;tput sgr0;;
+      2d) export DEVICE=lt013g;tput setaf 3;tput sgr0;;
+      3d) export DEVICE=lt01lte;tput setaf 3;tput sgr0;;
       4a) ;;
       5b) ~/$scriptsdir/clobber.sh;~/$scriptsdir/build.sh;tput setaf 3;;
       5x) ;;
-      5c) ;;
+      5c) ~/$scriptsdir/make_OTA.sh;tput setaf 3;;
       g)  ;;
       cc) ~/$scriptsdir/clobber.sh;tput setaf 3;;
       m)  ;;
