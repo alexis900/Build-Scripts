@@ -1,5 +1,5 @@
 export PATH=${PATH}:~/bin
-export EXPERIMENTAL_USE_JAVA8=true
+#export EXPERIMENTAL_USE_JAVA8=true
 export scriptsdir=scripts   # set this path to the folder where the scripts are located
 while :
 do
