@@ -30,7 +30,7 @@ echo " 8. - Build T310                g. - "
 echo " 9. - Build T311                cc.- Clobber"
 echo " 10.- Build T315          	m. - "		 
 echo " 11.- Build T311 & T315   	t.- Project Terminal"		
-echo " 12.-             		"
+echo " 12.- Build Device (no ota)"
 echo " 13.- Build T217S (aicp only)            "
 echo " r.- Reset Colors		uu.- Check all ccache stats"
 echo " x.- EXIT "
@@ -51,7 +51,7 @@ if [ "$?" != "1" ]
       9) ~/$scriptsdir/clobber.sh;~/$scriptsdir/build_T311.sh;tput setaf 3;;
       10) ~/$scriptsdir/clobber.sh;~/$scriptsdir/build_T315.sh;tput setaf 3;;
       11) ~/$scriptsdir/clobber.sh;~/$scriptsdir/build_T311_315.sh;tput setaf 3;;
-      12) ;;
+      12) ~/$scriptsdir/clobber.sh;~/$scriptsdir/build_device.sh;tput setaf 3;;
       13) ~/$scriptsdir/clobber.sh;~/$scriptsdir/build_T217S.sh;tput setaf 3;;
       1d) export DEVICE=lt01wifi;tput setaf 3;tput sgr0;;
       2d) export DEVICE=lt013g;tput setaf 3;tput sgr0;;

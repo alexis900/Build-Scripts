@@ -41,13 +41,12 @@ if [ ! -d ~/Builds/$(date +"%m-%d-%Y") ]; then
     mkdir ~/Builds/$(date +"%m-%d-%Y")
 fi
 
-if [ -f ~/$SOURCE/out/target/product/$DEVICE/cm-13*.zip ]; then 
-   cp ~/$SOURCE/out/target/product/$DEVICE/cm-13*.zip  ~/Builds/$(date +"%m-%d-%Y")/
- elif [ -f ~/$SOURCE/out/target/product/$DEVICE/aicp*mm*.zip ]; then 
-   cp ~/$SOURCE/out/target/product/$DEVICE/aicp*mm*.zip  ~/Builds/$(date +"%m-%d-%Y")/
- elif [ -f ~/$SOURCE/out/target/product/$DEVICE/Bliss*.zip ]; then 
-   cp ~/$SOURCE/out/target/product/$DEVICE/Bliss*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+shopt -s nocaseglob
+if [ -f ~/$SOURCE/out/target/product/$DEVICE/${SOURCE:n:2}*UNOFFICIAL*.zip ]; then 
+   cp ~/$SOURCE/out/target/product/$DEVICE/${SOURCE:n:2}*UNOFFICIAL*.zip  ~/Builds/$(date +"%m-%d-%Y")/
+ else echo "not found"; exit
 fi
+shopt -u nocaseglob
 
 echo -e "\E[1;32mMaking incremental OTA update..."; tput sgr0
 echo " "
@@ -61,5 +60,13 @@ if [ -f ~/Builds/$(date +"%m-%d-%Y")/$SOURCE-$DEVICE-inc_update_$(date +"%Y%m%d"
   fi
  mv ~/Builds/ota_base/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/Builds/ota_base/old/
  cp ~/$SOURCE/out/target/product/$DEVICE/obj/PACKAGING/target_files_intermediates/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/Builds/ota_base/
+ PASS=$(< ~/bin/pass)
+ echo -e "\E[1;32mUploading $DEVICE $SOURCE zips..."; tput sgr0
+ echo " "
+ ls ~/Builds/$(date +"%m-%d-%Y")/*${SOURCE:1:1}*$DEVICE*.zip > files.txt
+ mapfile -t myArray < files.txt
+ curl -T ${myArray[0]} ftp://uploads.androidfilehost.com --user gr8nole:$PASS
+ curl -T ${myArray[1]} ftp://uploads.androidfilehost.com --user gr8nole:$PASS
+ rm files.txt
 
 fi
