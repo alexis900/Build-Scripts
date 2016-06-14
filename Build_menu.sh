@@ -1,5 +1,5 @@
 export PATH=${PATH}:~/bin
-#export EXPERIMENTAL_USE_JAVA8=true
+export EXPERIMENTAL_USE_JAVA8=true
 export scriptsdir=scripts   # set this path to the folder where the scripts are located
 while :
 do
@@ -28,7 +28,7 @@ echo " 6. -                     	5x.- "
 echo " 7. - Build All Three           5c.- Make device incr. ota"
 echo " 8. - Build T310                g. - "	
 echo " 9. - Build T311                cc.- Clobber"
-echo " 10.- Build T315          	m. - "		 
+echo " 10.- Build T315          	mb.- Make bootimage"		 
 echo " 11.- Build T311 & T315   	t.- Project Terminal"		
 echo " 12.- Build Device (no ota)"
 echo " 13.- Build T217S (aicp only)            "
@@ -62,7 +62,7 @@ if [ "$?" != "1" ]
       5c) ~/$scriptsdir/make_OTA.sh;tput setaf 3;;
       g)  ;;
       cc) ~/$scriptsdir/clobber.sh;tput setaf 3;;
-      m)  ;;
+      mb)  ~/$scriptsdir/make_bootimage.sh;tput setaf 3;;
       t) gnome-terminal  --working-directory=/home/dave/$SOURCE;tput setaf 3;;
       u) ;;
       v) ;;
