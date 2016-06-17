@@ -59,14 +59,14 @@ shopt -u nocaseglob
 #  fi
 # mv ~/Builds/ota_base/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/Builds/ota_base/old/
 # cp ~/$SOURCE/out/target/product/$DEVICE/obj/PACKAGING/target_files_intermediates/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/Builds/ota_base/
-# PASS=$(< ~/bin/pass)
-# echo -e "\E[1;32mUploading $DEVICE $SOURCE zips..."; tput sgr0
-# echo " "
-# ls ~/Builds/$(date +"%m-%d-%Y")/*${SOURCE:1:1}*$DEVICE*.zip > files.txt
-# mapfile -t myArray < files.txt
-# curl -T ${myArray[0]} ftp://uploads.androidfilehost.com --user gr8nole:$PASS
+ PASS=$(< ~/bin/pass)
+ echo -e "\E[1;32mUploading $DEVICE $SOURCE zips..."; tput sgr0
+ echo " "
+ ls ~/Builds/$(date +"%m-%d-%Y")/*${SOURCE:1:1}*$DEVICE*.zip > files.txt
+ mapfile -t myArray < files.txt
+ curl -T ${myArray[0]} ftp://uploads.androidfilehost.com --user gr8nole:$PASS
 # curl -T ${myArray[1]} ftp://uploads.androidfilehost.com --user gr8nole:$PASS
-# rm files.txt
+ rm files.txt
 #
 #fi
 
@@ -101,13 +101,13 @@ shopt -u nocaseglob
 #  fi
 # mv ~/Builds/ota_base/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/Builds/ota_base/old/
 # cp ~/$SOURCE/out/target/product/$DEVICE/obj/PACKAGING/target_files_intermediates/${SOURCE:n:2}*_$DEVICE-target_files-*.zip ~/Builds/ota_base/
-# PASS=$(< ~/bin/pass)
-# echo -e "\E[1;32mUploading $DEVICE $SOURCE zips..."; tput sgr0
-# echo " "
-# ls ~/Builds/$(date +"%m-%d-%Y")/*${SOURCE:1:1}*$DEVICE*.zip > files.txt
-# mapfile -t myArray < files.txt
-# curl -T ${myArray[0]} ftp://uploads.androidfilehost.com --user gr8nole:$PASS
+ PASS=$(< ~/bin/pass)
+ echo -e "\E[1;32mUploading $DEVICE $SOURCE zips..."; tput sgr0
+ echo " "
+ ls ~/Builds/$(date +"%m-%d-%Y")/*${SOURCE:1:1}*$DEVICE*.zip > files.txt
+ mapfile -t myArray < files.txt
+ curl -T ${myArray[0]} ftp://uploads.androidfilehost.com --user gr8nole:$PASS
 # curl -T ${myArray[1]} ftp://uploads.androidfilehost.com --user gr8nole:$PASS
-# rm files.txt
+ rm files.txt
 #
 #fi
