@@ -35,3 +35,5 @@ echo " "
 echo -e "\E[1;36mDeleting output folder..."; tput sgr0
 echo " "
 make clobber
+
+exec $SHELL
