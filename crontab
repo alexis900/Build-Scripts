@@ -1,6 +1,8 @@
 MAILTO=gr8nole@gmail.com
-55 22 * * 4 export DISPLAY=:0 && gnome-terminal -e ~/scripts/auto_clobber.sh
-00 23 * * 4 export DISPLAY=:0 && gnome-terminal -e ~/scripts/auto_build_cm13.sh
-00 7 * * 5 export DISPLAY=:0 && gnome-terminal -e ~/scripts/auto_build_aicp.sh
-00 0 * * 6 export DISPLAY=:0 && gnome-terminal -e ~/scripts/auto_build_bliss.sh
+DISPLAY=:0
+USER=dave
+55 22 * * 4 gnome-terminal -e ~/scripts/auto_clobber.sh
+00 23 * * 4 export SOURCE=cm13 && gnome-terminal -e ~/scripts/auto_build.sh
+00 7 * * 5 export SOURCE=aicp && gnome-terminal -e ~/scripts/auto_build.sh
+00 0 * * 6 export SOURCE=bliss && gnome-terminal -e ~/scripts/auto_build.sh
 
