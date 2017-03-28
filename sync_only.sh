@@ -6,4 +6,4 @@ cd ~/$SOURCE
 
 echo -e "\E[1;36mSyncing $SOURCE repo..."; tput sgr0
 echo " "
-repo sync 
+repo sync --force-sync

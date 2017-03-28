@@ -1,5 +1,7 @@
 #! /bin/bash
 
+#Copy this file to the directory where the recovery.img is located and execute
+
 read -p "Enter device code: "  device
 read -p "Enter TWRP version: " version
 

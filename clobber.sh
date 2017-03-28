@@ -10,9 +10,9 @@ do
   echo "> CLOBBER MENU"
   echo
 echo " aa. - Clobber All"
-echo " a. - Clobber AICP"
-echo " b. - Clobber Bliss"
-echo " c. - Clobber CM13"
+echo " a. - "
+echo " b. - Clobber cdDroid"
+echo " c. - Clobber Lineage"
 echo " n. - NO - DON'T CLOBBER"
 
   echo 
@@ -33,8 +33,8 @@ if [ "$?" != "1" ]
   then
     case $opt in
       aa) tput sgr0;~/$scriptsdir/make_clobber_all.sh;exit;;
-      a) tput sgr0;~/$scriptsdir/make_clobber_aicp.sh;exit;;
-      b) tput sgr0;~/$scriptsdir/make_clobber_bliss.sh;exit;;
+      a) ;;
+      b) tput sgr0;~/$scriptsdir/make_clobber_crdroid.sh;exit;;
       c) tput sgr0;~/$scriptsdir/make_clobber.sh;exit;;
       n) tput sgr0;exit;;
      esac

@@ -2,7 +2,7 @@
 
 echo -e "\E[1;36mMoving to source directory..."; tput sgr0
 echo " "
-cd ~/aicp
+cd ~/crdroid
 echo " "
 echo -e "\E[1;36mSetting up source environment..."; tput sgr0
 echo " "

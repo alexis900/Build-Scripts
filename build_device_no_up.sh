@@ -48,10 +48,3 @@ if [ -f ~/$SOURCE/out/target/product/$DEVICE/${SOURCE:n:2}*$(date +"%Y%m%d")*.zi
 fi
 shopt -u nocaseglob
 
- PASS=$(< ~/bin/pass)
- echo -e "\E[1;32mUploading $DEVICE $SOURCE zips..."; tput sgr0
- echo " "
- ls ~/Builds/$(date +"%m-%d-%Y")/*${SOURCE:1:1}*$DEVICE*.zip > files.txt
- mapfile -t myArray < files.txt
- curl -T ${myArray[0]} ftp://uploads.androidfilehost.com --user gr8nole:$PASS
- rm files.txt
