@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Exec=/opt/teamviewer/tv_bin/TeamViewer
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Teamviewer
+Name=Teamviewer
+Comment[en_US]=
+Comment=
+X-GNOME-Autostart-Delay=30

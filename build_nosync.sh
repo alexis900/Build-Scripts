@@ -9,6 +9,8 @@ echo -e "\E[1;32mMoving to $SOURCE source directory..."; tput sgr0
 echo " "
 cd ~/$SOURCE
 
+./prebuilts/sdk/tools/jack-admin kill-server
+
 date  >> ~/time.txt
 echo " " >> ~/time.txt
 
