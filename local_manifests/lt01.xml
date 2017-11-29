@@ -5,23 +5,13 @@
 <manifest>
 
   <project name="LineageOS/android_hardware_samsung" path="hardware/samsung" revision="cm-14.1" />
-
   <project name="LineageOS/android_packages_apps_SamsungServiceMode" path="packages/apps/SamsungServiceMode" revision="cm-14.1" />
-
   <project name="LineageOS/android_external_stlport" path="external/stlport" revision="cm-14.1" />
-
   <project name="gr8nole/android_kernel_samsung_smdk4x12" path="kernel/samsung/smdk4x12" remote="github" revision="cm-14.1" />
-
   <project name="gr8nole/android_device_samsung_lt01-common" path="device/samsung/lt01-common" remote="github" revision="cm-14.1" />
-
   <project name="gr8nole/android_device_samsung_lt01wifi" path="device/samsung/lt01wifi" remote="github" revision="cm-14.1" />
-
   <project name="gr8nole/android_device_samsung_lt013g" path="device/samsung/lt013g" remote="github" revision="cm-14.1" />
-
   <project name="gr8nole/android_device_samsung_lt01lte" path="device/samsung/lt01lte" remote="github" revision="cm-14.1" />
-
-  <project name="gr8nole/proprietary_vendor_samsung" path="vendor/samsung" remote="github" revision="cm-14.1" />
-
-  
+  <project name="gr8nole/proprietary_vendor_samsung" path="vendor/samsung" remote="github" revision="cm-14.1" />  
 
 </manifest>
